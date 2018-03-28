@@ -12,5 +12,7 @@ $ aws configure
 
 ### Running
 
-$ pipenv run python snappy/snappy.py
+$ pipenv run python snappy/snappy.py <command> <--project=<your-project-name>
 
+*command* list, stop, start
+*project* is optional
