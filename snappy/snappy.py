@@ -14,13 +14,13 @@ def snapshots():
     '''Commands for snapshots'''
 
 '''
-This command lists out snapshots for the EC2 volumes optionally filtering
-them by the a tag named 'Project'
+This command lists out snapshots for EC2 volumes optionally filtering
+them by the tag named 'Project'
 '''
 @snapshots.command('list')
 @click.option('--project', default=None,
     help='Only snapshots for project (tag Project:<name>)')
-def list_volumes(project):
+def list_snapshots(project):
     '''List EC2 snapshots'''
 
     instances = get_instances(project)
@@ -43,8 +43,8 @@ def volumes():
     '''Commands for volumes'''
 
 '''
-This command lists out the EC2 instances optionally filtering them by the
-a tag named 'Project'
+This command lists out the volumes for EC2 instances optionally filtering them
+by the tag named 'Project'
 '''
 @volumes.command('list')
 @click.option('--project', default=None,
@@ -84,8 +84,8 @@ def instances():
     '''Commands for instances'''
 
 '''
-This command stops EC2 instances optionally filtering them by the
-a tag named 'Project'
+This command starts EC2 instances optionally filtering them by the tag
+named 'Project'
 '''
 @instances.command('start')
 @click.option('--project', default=None,
